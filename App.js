@@ -1,6 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+//Fonts
 import Ionicons from '@expo/vector-icons/Ionicons';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+
+
 
 export default function App() {
   return (
@@ -31,11 +35,23 @@ export default function App() {
           <Text>Matemático e Cientista da Computação | Pioneiro da Inteligência Artificial e da Criptografia</Text>
         </View>
         <View style={styles.universidade}>
-          <Text>Government Code and Cypher School (GC&CS) - Bletchley Park</Text>
-          <Text>Inglaterra</Text>
+          <Text style={styles.txtTrabalho}>Government Code and Cypher School (GC&CS) - Bletchley Park</Text>
+          <Text style={styles.txtLocal}>Inglaterra</Text>
         </View>
+        <Text style={styles.txtConexao}>+ de 500 conexões</Text>
         <View style={styles.conexao}>
-          <Text>+ de 500 </Text>
+          <View style={styles.botoesConexao}>
+            <View style={styles.enviar}>
+              <FontAwesome name="send" size={11} color="white" />
+              <Text style={styles.txtEnviar}>Enviar mensagem</Text>
+            </View>
+            <View style={styles.seguir}>
+              <Text>+ Seguir</Text>
+            </View>
+            <View style={styles.more}>
+              <Text>...</Text>
+            </View>
+          </View>
         </View>
       </View>
     </View>
@@ -94,5 +110,50 @@ const styles = StyleSheet.create({
   tituloNome:{
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  txtTrabalho:{
+    fontSize: 13,
+    fontWeight: '350',
+  },
+  txtLocal: {
+    fontSize: 13,
+    color: '#8f8f8f',
+  },
+  txtConexao: {
+    fontSize: 13,
+    color: '#8f8f8f',
+    fontWeight: 'bold',
+  },
+  botoesConexao:{
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  txtEnviar: {
+    color: '#fff',
+    fontWeight: '500',
+  },
+  enviar:{
+    width: '40%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#0077B5',
+    borderRadius: 15,
+    gap: 7,
+  },
+  seguir:{
+    width: '40%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#0077B5',
+    borderRadius: 15,
+    gap: 7,
+    height: 'auto',
   },
 });
